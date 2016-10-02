@@ -5,62 +5,64 @@
     </head>
 
     <body>
-        <h1>Submit A Purchase</h1>
-        <form method="POST" action="https://tierion.com/form/submit">
-            <div class="form-group">
-                <input name="_key" type="hidden" value="U1NIoilP0UCyuKJOeYfJQA">
-            </div>
-            <div class="form-group">
-                <label for="sellerfirstname">Seller's First Name</label>
-                <input name="sellerfirstname" type="text" id="sellerfirstname">
-            </div>
-            <div class="form-group">
-                <label for="sellerlastname">Seller's Last Name</label>
-                <input name="sellerlastname" type="text" id="sellerlastname">
-            </div>
-            <div class="form-group">
-                <label for="selleremailaddress">Seller's Email Address</label>
-                <input name="selleremailaddress" type="email" id="selleremailaddress">
-            </div>
-            <div class="form-group">
-                <label for="sellertaxid">Seller's Tax ID</label>
-                <input name="sellertaxid" type="number" id="sellertaxid">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="buyerfirstname">Buyer's First Name</label>
-                <input name="buyerfirstname" type="text" id="buyerfirstname">
-            </div>
-            <div class="form-group">
-                <label for="buyerlastname">Buyer's Last Name</label>
-                <input name="buyerlastname" type="text" id="buyerlastname">
-            </div>
-            <div class="form-group">
-                <label for="buyeremailaddress">Buyer's Email Address</label>
-                <input name="buyeremailaddress" type="email"  id="buyeremailaddress">
-            </div>
-            <div class="form-group">
-                <label for="buyertaxid">Buyer's Tax ID</label>
-                <input name="buyertaxid" type="number" id="buyertaxid">
-            </div>
-            <div class="form-group">
-                <label for="transactiondate">Buyer's Tax ID</label>
-                <input name="transactiondate" type="date" id="transactiondate">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="equipmentname">Equipment Name</label>
-                <input name="equipmentname" type="text" id="equipmentname">
-            </div>
-            <div class="form-group">
-                <label for="equipmentdescription">Description</label>
-                <textarea name="equipmentdescription" id="equipmentdescription" placeholder="Enter a description of the equipment here"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="equipmentserial">Serial Number</label>
-                <input name="equipmentserial" type="text" id="equipmentserial">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class="container">
+            <h1 class="jumbotron">Submit A Purchase</h1>
+            <form method="POST" action="https://tierion.com/form/submit">
+                <div class="form-group">
+                    <input name="_key" type="hidden" value="U1NIoilP0UCyuKJOeYfJQA">
+                </div>
+                <div class="form-group">
+                    <label for="sellerfirstname">Seller's First Name</label>
+                    <input name="sellerfirstname" type="text" id="sellerfirstname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="sellerlastname">Seller's Last Name</label>
+                    <input name="sellerlastname" type="text" id="sellerlastname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="selleremailaddress">Seller's Email Address</label>
+                    <input name="selleremailaddress" type="email" id="selleremailaddress" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="sellertaxid">Seller's Tax ID</label>
+                    <input name="sellertaxid" type="number" id="sellertaxid" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="buyerfirstname">Buyer's First Name</label>
+                    <input name="buyerfirstname" type="text" id="buyerfirstname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="buyerlastname">Buyer's Last Name</label>
+                    <input name="buyerlastname" type="text" id="buyerlastname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="buyeremailaddress">Buyer's Email Address</label>
+                    <input name="buyeremailaddress" type="email"  id="buyeremailaddress" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="buyertaxid">Buyer's Tax ID</label>
+                    <input name="buyertaxid" type="number" id="buyertaxid" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="transactiondate">Buyer's Tax ID</label>
+                    <input name="transactiondate" type="date" id="transactiondate" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="equipmentname">Equipment Name</label>
+                    <input name="equipmentname" type="text" id="equipmentname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="equipmentdescription">Description</label>
+                    <textarea name="equipmentdescription" id="equipmentdescription" placeholder="Enter a description of the equipment here" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="equipmentserial">Serial Number</label>
+                    <input name="equipmentserial" type="text" id="equipmentserial" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </body>
 </html>
