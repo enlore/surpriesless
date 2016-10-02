@@ -2,18 +2,6 @@ div {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-#tagline-box {
-	font-size: 40px;
-	padding-top: 75px;
-	padding-bottom: 75px;
-	text-align: center;
-	font-weight: 400;
-}
-
-label, input {
-    display: block;
-}
-
 .tip-top {
 	text-align: center;
 	font-weight: 700;
@@ -26,6 +14,24 @@ label, input {
 	font-weight: 700;
 	font-size: 50px;
 	padding-top: 20px;
+}
+
+#tagline-box {
+	font-size: 40px;
+	padding-top: 75px;
+	padding-bottom: 60px;
+	text-align: center;
+	font-weight: 400;
+}
+
+#or {
+	font-weight: 600;
+	text-align: center;
+	font-size: 24px;
+}
+
+label, input {
+    display: block;
 }
 
 .form-control {
