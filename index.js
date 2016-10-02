@@ -33,7 +33,23 @@ app.get("/purchase-history", (req, res) => {
     } else {
         purchaseRecordStore.getRecords((err, records) => {
             if (err) return res.json(err)
-            res.json(records)
+            //res.json(records)
+            let ids = records.records.map(record => record.id)
+            let count = 0
+            let _rec = []
+
+            ids.forEach(id => {
+                purchaseRecordStore.getRecord(id, (err, record) => {
+                    if (err) console.error(err)
+                    else {
+                        _rec.push(record)
+                        count++
+                        if (count === ids.length) {
+                            res.json(_rec)
+                        }
+                    }
+                })
+            })
         })
     }
 })
