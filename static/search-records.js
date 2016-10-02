@@ -9,6 +9,15 @@
             _recordsBySerial: []
         },
 
+        methods: {
+            group: function (records) {
+                var grouped = _.groupBy(records, "data.equipmentserial")
+                var groupedArr = _.toArray(grouped)
+                var arr = _.flatten(groupedArr)
+                return arr
+            }
+        },
+
         computed: {
             grouped: {
                 get: function () {
@@ -19,6 +28,7 @@
                     this._recordsBySerial = val
                 }
             },
+
             records: {
                 set: function (val) {
                     console.info("set", val)
@@ -64,20 +74,12 @@
                             return self._records[id]
                         })
 
-                        var grouped = _.groupBy(mapped, "data.equipmentserial")
-                        var groupedArr = _.toArray(grouped)
+                        return this.group(mapped)
 
-                        //self._recordsBySerial = groupedArr
-
-                        //var arr = _.flatten(groupedArr)
 
                         //var sorted = arr.sort(function (a, b) {
                             //return moment(a.data.transactiondate).isBefore(moment(b.data.transactiondate))
                         //})
-
-                        //console.info(sorted)
-
-                        return mapped
                     }
                 }
             }
@@ -89,7 +91,7 @@
             superagent.get("/purchase-history")
                 .end(function (err, resp) {
                     if (err) console.error(err)
-                    self.records = resp.body
+                    self.records = self.group(resp.body)
                     self.query = "x"
                     self.query = "" // HAX
 

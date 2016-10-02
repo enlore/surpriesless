@@ -23,15 +23,14 @@
                             <div class="record-details">
                                 <p> Serial Number: {{ record.data.equipmentserial }} </p>
                                 <p> {{ record.data.equipmentdescription }} </p>
-                                <p> {{ record.data.transactiondate }} </p>
+
+                                <p> Transaction date: {{ record.data.transactiondate }} </p>
 
                                 <p> Seller Tax ID: {{ record.data.sellertaxid }} </p>
                                 <p> Sold by: {{ record.data.sellerfirstname }} {{ record.data.sellerlastname }} </p>
 
                                 <p> Buyer Tax ID: {{ record.data.buyertaxid }} </p>
                                 <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
-
-                                <p> Transaction date: {{ record.data.transactiondate }} </p>
                                 <p> Transaction ID: {{ record.id }} </p>
                             </div>
                     </div>
