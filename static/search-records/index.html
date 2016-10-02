@@ -19,13 +19,15 @@
 
                 <template v-for="recordGroup in records">
                     <div class="record-line-item">
-                        <p class="equip-name">
+                        <h2 class="">
                             {{ recordGroup[0].data.equipmentname }}
-                        </p>
+                        </h2>
+
                         <p> Serial Number: {{ recordGroup[0].data.equipmentserial }} </p>
                         <p> {{ recordGroup[0].data.equipmentdescription }} </p>
 
 
+                        <h3> Transaction History </h3>
                         <record-detail class="record-details"
                             v-for="record in recordGroup"
                             v-bind:record="record"
@@ -53,7 +55,7 @@
         </div>
 
         <script id="record-comp-template" type="text/x-template">
-            <div class="record-comp-item">
+            <div class="record-transaction">
                 <div>
                     <p> Transaction date: {{ record.data.transactiondate }} </p>
 
@@ -62,7 +64,7 @@
 
                     <p> Buyer Tax ID: {{ record.data.buyertaxid }} </p>
                     <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
-                    <p> Transaction ID: {{ record.id }} </p>
+                    <span class="record-transaction--trans-id"> Transaction ID: {{ record.id }} </span>
                 </div>
             </div>
         </script>

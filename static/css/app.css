@@ -1,46 +1,59 @@
-div {
-	font-family: 'Source Sans Pro', sans-serif;
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 28px;
 }
 
 .tip-top {
-	text-align: center;
-	font-weight: 700;
-	font-size: 65px;
-	padding-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 65px;
+    padding-top: 20px;
 }
 
 .tip-top-2 {
-	text-align: center;
-	font-weight: 700;
-	font-size: 50px;
-	padding-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    padding-top: 20px;
 }
 
 #tagline-box {
-	font-size: 40px;
-	padding-top: 75px;
-	padding-bottom: 60px;
-	text-align: center;
-	font-weight: 400;
+    font-size: 40px;
+    padding-top: 75px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-weight: 400;
 }
 
 #or {
-	font-weight: 600;
-	text-align: center;
-	font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 24px;
 }
 
 ul {
-	text-align: right;
+    text-align: right;
 }
 
 #submit-section {
-	margin-bottom: 75px;
+    margin-bottom: 75px;
 }
 
 .navbar-x {
-	margin-top: 20px;
-	background-color: white;
+    margin-top: 20px;
+    background-color: white;
 }
 
 label, input {
@@ -48,35 +61,48 @@ label, input {
 }
 
 .form-control {
-	border-radius: 0%;
+    border-radius: 0%;
 }
 
 .form-group {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .record-line-item {
-    border-bottom: 1px solid grey;
-    border-left: 3px solid blue;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
+    /*border-bottom: 1px solid grey;*/
+    /*border-left: 3px solid blue;*/
+    margin: 3rem 0;
+    padding: 1rem;
 }
 
-.record-comp-item {
-    border-left: 2px solid grey;
-    padding-left: 1rem;
+.record-line-item:last-child {
+    margin-bottom: 8rem;
+}
+
+.record-transaction {
+    /*border: 1px solid grey;*/
+    background-color: #f7f7f7;
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 1rem;
+}
+
+.record-transaction--trans-id {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 #record-search-field {
-	padding-top: 20px;
-	padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .equip-name {
-	font-weight: 600;
-	font-size: 20px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .record-details {
-	font-size: 14px;
+    font-size: 14px;
 }
