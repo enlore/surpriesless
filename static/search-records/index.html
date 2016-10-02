@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/app.css" />
+        <style>
+            .record-line-item {
+                padding: 1rem;
+                border: 1px solid grey;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="records-view">
+            <div>
+                <label> Search records by ID </label>
+                <input type="text" v-model="query"/>
+            </div>
+
+            <template v-for="record in records">
+                <div class="record-line-item">
+                    <p> {{ record.id }} </p>
+                    <p> {{ record.data.equipmentname }} </p>
+                    <p> {{ record.data.equipmentdescription }} </p>
+                    <p> {{ record.data.transactiondate }} </p>
+
+                    <p> Sold by: {{ record.data.sellerfirstname }} {{ record.data.sellerlastname }} </p>
+
+                    <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
+
+                    <p> Transaction date: {{ record.data.transactiondate }} </p>
+                </div>
+            </template>
+        </div>
+
+        <script src="/sifter.js"></script>
+        <script src="/superagent.js"></script>
+        <script src="/vue.js"></script>
+        <script src="/search-records.js"></script>
+    </body>
+</html>
