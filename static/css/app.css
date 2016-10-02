@@ -1,8 +1,37 @@
-html, body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: #46339d;
+div {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#tagline-box {
+	font-size: 40px;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	text-align: center;
+	font-weight: 400;
 }
 
 label, input {
     display: block;
+}
+
+.tip-top {
+	text-align: center;
+	font-weight: 700;
+	font-size: 65px;
+	padding-top: 20px;
+}
+
+.tip-top-2 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 50px;
+	padding-top: 20px;
+}
+
+.form-control {
+	border-radius: 0%;
+}
+
+.form-group {
+	font-size: 16px;
 }
