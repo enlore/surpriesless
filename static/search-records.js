@@ -29,18 +29,19 @@
                         var res = this._searchDB.search(query, {
                             fields: [
                                 "id",
-                                "sellerfirstname",
-                                "sellerlastname",
-                                "selleremailaddress",
-                                "buyerfirstname",
-                                "buyerlastname",
-                                "buyeremailaddress",
-                                "buyertaxid",
-                                "transactiondate",
-                                "equipmentname",
-                                "equipmentdescription",
-                                "equipmentserial"
+                                "data.sellerfirstname",
+                                "data.sellerlastname",
+                                "data.selleremailaddress",
+                                "data.buyerfirstname",
+                                "data.buyerlastname",
+                                "data.buyeremailaddress",
+                                "data.buyertaxid",
+                                "data.transactiondate",
+                                "data.equipmentname",
+                                "data.equipmentdescription",
+                                "data.equipmentserial"
                             ],
+                            nesting: true
                         })
 
                         var ids = res.items.map(function (item) {
@@ -66,7 +67,7 @@
                     self.query = "x"
                     self.query = "" // HAX
 
-                    self._searchDB = new Sifter(resp.body.records)
+                    self._searchDB = new Sifter(resp.body)
                 })
         }
     })

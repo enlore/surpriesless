@@ -23,6 +23,12 @@
                     <p> {{ record.data.equipmentname }} </p>
                     <p> {{ record.data.equipmentdescription }} </p>
                     <p> {{ record.data.transactiondate }} </p>
+
+                    <p> Sold by: {{ record.data.sellerfirstname }} {{ record.data.sellerlastname }} </p>
+
+                    <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
+
+                    <p> Transaction date: {{ record.data.transactiondate }} </p>
                 </div>
             </template>
         </div>
