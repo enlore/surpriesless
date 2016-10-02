@@ -17,26 +17,39 @@
                     </div>
                 </div>
 
-                <template v-for="record in records">
+                <template v-for="recordGroup in records">
                     <div class="record-line-item">
-                        <p class="equip-name"> {{ record.data.equipmentname }} </p>
-                            <div class="record-details">
-                                <p> Serial Number: {{ record.data.equipmentserial }} </p>
-                                <p> {{ record.data.equipmentdescription }} </p>
+                        <p class="equip-name">
+                            {{ recordGroup[0].data.equipmentname }}
+                        </p>
+                        <p> Serial Number: {{ recordGroup[0].data.equipmentserial }} </p>
+                        <p> {{ recordGroup[0].data.equipmentdescription }} </p>
 
-                                <p> Transaction date: {{ record.data.transactiondate }} </p>
 
-                                <p> Seller Tax ID: {{ record.data.sellertaxid }} </p>
-                                <p> Sold by: {{ record.data.sellerfirstname }} {{ record.data.sellerlastname }} </p>
-
-                                <p> Buyer Tax ID: {{ record.data.buyertaxid }} </p>
-                                <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
-                                <p> Transaction ID: {{ record.id }} </p>
-                            </div>
+                        <record-detail class="record-details"
+                            v-for="record in recordGroup"
+                            v-bind:record="record"
+                            >
+                        </record-detail>
                     </div>
                 </template>
             </div>
         </div>
+
+        <script id="record-comp-template" type="text/x-template">
+            <div class="record-comp-item">
+                <div>
+                    <p> Transaction date: {{ record.data.transactiondate }} </p>
+
+                    <p> Seller Tax ID: {{ record.data.sellertaxid }} </p>
+                    <p> Sold by: {{ record.data.sellerfirstname }} {{ record.data.sellerlastname }} </p>
+
+                    <p> Buyer Tax ID: {{ record.data.buyertaxid }} </p>
+                    <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
+                    <p> Transaction ID: {{ record.id }} </p>
+                </div>
+            </div>
+        </script>
 
         <script src="/moment.js"></script>
         <script src="/lodash.js"></script>

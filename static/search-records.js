@@ -1,20 +1,38 @@
 (function () {
+    var recordComp = {
+        template: "#record-comp-template",
+
+        data: function () {
+            return {
+
+            }
+        },
+
+        props: [
+            "record"
+        ]
+    }
+
     var records = new Vue({
         el: "#records-view",
+
+        components: {
+            "record-detail": recordComp
+        },
 
         data: {
             query: "",
             _searchDB: {},
             _records: [],
-            _recordsBySerial: []
+            _recordsFlat: []
         },
 
         methods: {
             group: function (records) {
                 var grouped = _.groupBy(records, "data.equipmentserial")
                 var groupedArr = _.toArray(grouped)
-                var arr = _.flatten(groupedArr)
-                return arr
+                //var arr = _.flatten(groupedArr)
+                return groupedArr
             }
         },
 
@@ -71,7 +89,7 @@
                         var self = this
 
                         var mapped = ids.map(function (id) {
-                            return self._records[id]
+                            return self._recordsFlat[id]
                         })
 
                         return this.group(mapped)
@@ -92,6 +110,7 @@
                 .end(function (err, resp) {
                     if (err) console.error(err)
                     self.records = self.group(resp.body)
+                    self._recordsFlat = resp.body
                     self.query = "x"
                     self.query = "" // HAX
 
