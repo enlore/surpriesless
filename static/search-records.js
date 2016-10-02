@@ -5,10 +5,20 @@
         data: {
             query: "",
             _searchDB: {},
-            _records: []
+            _records: [],
+            _recordsBySerial: []
         },
 
         computed: {
+            grouped: {
+                get: function () {
+
+                },
+
+                set: function (val) {
+                    this._recordsBySerial = val
+                }
+            },
             records: {
                 set: function (val) {
                     console.info("set", val)
@@ -49,9 +59,25 @@
                         })
 
                         var self = this
-                        return ids.map(function (id) {
+
+                        var mapped = ids.map(function (id) {
                             return self._records[id]
                         })
+
+                        var grouped = _.groupBy(mapped, "data.equipmentserial")
+                        var groupedArr = _.toArray(grouped)
+
+                        //self._recordsBySerial = groupedArr
+
+                        //var arr = _.flatten(groupedArr)
+
+                        //var sorted = arr.sort(function (a, b) {
+                            //return moment(a.data.transactiondate).isBefore(moment(b.data.transactiondate))
+                        //})
+
+                        //console.info(sorted)
+
+                        return mapped
                     }
                 }
             }
@@ -68,6 +94,7 @@
                     self.query = "" // HAX
 
                     self._searchDB = new Sifter(resp.body)
+
                 })
         }
     })
