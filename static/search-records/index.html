@@ -19,7 +19,9 @@
 
             <template v-for="record in records">
                 <div class="record-line-item">
-                    <p> {{ record.id }} </p>
+                    <p> ID: {{ record.id }} </p>
+                    <p> S/N: {{ record.data.equipmentserial }} </p>
+
                     <p> {{ record.data.equipmentname }} </p>
                     <p> {{ record.data.equipmentdescription }} </p>
                     <p> {{ record.data.transactiondate }} </p>
