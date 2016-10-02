@@ -1,3 +1,5 @@
+"use strict"
+
 const superagent = require("superagent")
 
 // RaB5ZJ9HR4jemyRA6HToZegnFD28pWAoFE5WDe1nIaE
