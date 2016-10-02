@@ -56,20 +56,13 @@
             }
         },
 
-        methods: {
-            doSearch: function doSearch () {
-                var self = this
-            },
-        },
-
         created: function () {
             var self = this
-
 
             superagent.get("/purchase-history")
                 .end(function (err, resp) {
                     if (err) console.error(err)
-                    self.records = resp.body.records
+                    self.records = resp.body
                     self.query = "x"
                     self.query = "" // HAX
 
