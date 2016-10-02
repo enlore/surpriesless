@@ -5,13 +5,58 @@
     </head>
 
     <body>
-        <h1> Tye Ryon </h1>
+        <h1>Submit A Purchase</h1>
         <form method="POST" action="https://tierion.com/form/submit">
-            <input name="_key" type="hidden" value="U1NIoilP0UCyuKJOeYfJQA">
-            <input name="firstname" type="text" value="firstname">
-            <input name="lastname" type="text" value="lastname">
-            <input name="emailaddress" type="email" value="emailaddress">
-            <button type="submit">Submit</button>
+            <div class="form-group">
+                <input name="_key" type="hidden" value="U1NIoilP0UCyuKJOeYfJQA">
+            </div>
+            <div class="form-group">
+                <label for="sellerfirstname">Seller's First Name</label>
+                <input name="sellerfirstname" type="text" id="sellerfirstname">
+            </div>
+            <div class="form-group">
+                <label for="sellerlastname">Seller's Last Name</label>
+                <input name="sellerlastname" type="text" id="sellerlastname">
+            </div>
+            <div class="form-group">
+                <label for="selleremailaddress">Seller's Email Address</label>
+                <input name="selleremailaddress" type="email" id="selleremailaddress">
+            </div>
+            <div class="form-group">
+                <label for="sellertaxid">Seller's Tax ID</label>
+                <input name="sellertaxid" type="number" id="sellertaxid">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="buyerfirstname">Buyer's First Name</label>
+                <input name="buyerfirstname" type="text" id="buyerfirstname">
+            </div>
+            <div class="form-group">
+                <label for="buyerlastname">Buyer's Last Name</label>
+                <input name="buyerlastname" type="text" id="buyerlastname">
+            </div>
+            <div class="form-group">
+                <label for="buyeremailaddress">Buyer's Email Address</label>
+                <input name="buyeremailaddress" type="email"  id="buyeremailaddress">
+            </div>
+            <div class="form-group">
+                <label for="buyertaxid">Buyer's Tax ID</label>
+                <input name="buyertaxid" type="number"  id="buyertaxid">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="equipmentname">Equipment Name</label>
+                <input name="equipmentname" type="text" id="equipmentname">
+            </div>
+            <div class="form-group">
+                <label for="equipmentdescription">Description</label>
+                <input name="equipmentdescription" type="text"  id="equipmentdescription">
+            </div>
+            <div class="form-group">
+                <label for="equipmentserial">Serial Number</label>
+                <input name="equipmentserial" type="text" id="equipmentserial">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </body>
 </html>
