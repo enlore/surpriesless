@@ -21,6 +21,13 @@ label, input {
 	padding-top: 20px;
 }
 
+.tip-top-2 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 50px;
+	padding-top: 20px;
+}
+
 .form-control {
 	border-radius: 0%;
 }
