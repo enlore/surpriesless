@@ -30,6 +30,19 @@ div {
 	font-size: 24px;
 }
 
+ul {
+	text-align: right;
+}
+
+#submit-section {
+	margin-bottom: 75px;
+}
+
+.navbar-x {
+	margin-top: 20px;
+	background-color: white;
+}
+
 label, input {
     display: block;
 }
