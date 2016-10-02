@@ -57,7 +57,15 @@ label, input {
 
 .record-line-item {
     border-bottom: 1px solid grey;
-    }
+    border-left: 3px solid blue;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.record-comp-item {
+    border-left: 2px solid grey;
+    padding-left: 1rem;
+}
 
 #record-search-field {
 	padding-top: 20px;
