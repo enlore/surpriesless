@@ -6,6 +6,11 @@
 
     <body>
         <div id="records-view">
+            <div>
+                <label> Search records by ID </label>
+                <input type="text" v-model="query"/>
+            </div>
+
             <template v-for="record in records">
                 <div class="record-line-item">
                     <pre>{{ record.label }}</pre>
