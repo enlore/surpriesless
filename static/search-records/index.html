@@ -2,39 +2,41 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/app.css" />
-        <style>
-            .record-line-item {
-                padding: 1rem;
-                border: 1px solid grey;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
     </head>
 
     <body>
-        <div id="records-view">
-            <div>
-                <label> Search records by ID </label>
-                <input type="text" v-model="query"/>
-            </div>
+        <div class="container">
+            <p class="tip-top-2">Search Records</p>
 
-            <template v-for="record in records">
-                <div class="record-line-item">
-                    <p> ID: {{ record.id }} </p>
-                    <p> S/N: {{ record.data.equipmentserial }} </p>
-
-                    <p> {{ record.data.equipmentname }} </p>
-                    <p> {{ record.data.equipmentdescription }} </p>
-                    <p> {{ record.data.transactiondate }} </p>
-
-                    <p> Seller TaxId: {{ record.data.sellertaxid }} </p>
-                    <p> Sold by: {{ record.data.sellerfirstname }} {{ record.data.sellerlastname }} </p>
-
-                    <p> Buyer TaxId: {{ record.data.buyertaxid }} </p>
-                    <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
-
-                    <p> Transaction date: {{ record.data.transactiondate }} </p>
+            <div id="records-view">
+                <div class="form-group row" id="record-search-field">
+                    <label class="col-md-2 col-form-label"> Search Records by ID </label>
+                    <div class="col-md-2">
+                        <input type="text" v-model="query" class="form-control"/>
+                    </div>
                 </div>
-            </template>
+
+                <template v-for="record in records">
+                    <div class="record-line-item">
+                        <p class="equip-name"> {{ record.data.equipmentname }} </p>
+                            <div class="record-details">
+                                <p> Serial Number: {{ record.data.equipmentserial }} </p>
+                                <p> {{ record.data.equipmentdescription }} </p>
+                                <p> {{ record.data.transactiondate }} </p>
+
+                                <p> Seller Tax ID: {{ record.data.sellertaxid }} </p>
+                                <p> Sold by: {{ record.data.sellerfirstname }} {{ record.data.sellerlastname }} </p>
+
+                                <p> Buyer Tax ID: {{ record.data.buyertaxid }} </p>
+                                <p> Sold to: {{ record.data.buyerfirstname }} {{ record.data.buyerlastname }} </p>
+
+                                <p> Transaction date: {{ record.data.transactiondate }} </p>
+                                <p> Transaction ID: {{ record.id }} </p>
+                            </div>
+                    </div>
+                </template>
+            </div>
         </div>
 
         <script src="/sifter.js"></script>

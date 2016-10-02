@@ -41,3 +41,21 @@ label, input {
 .form-group {
 	font-size: 16px;
 }
+
+.record-line-item {
+    border-bottom: 1px solid grey;
+    }
+
+#record-search-field {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.equip-name {
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.record-details {
+	font-size: 14px;
+}
