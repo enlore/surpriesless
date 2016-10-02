@@ -1,5 +1,7 @@
 "use strict"
 
+const TierionStore = require("./tierion-store.js")
+
 const express = require("express")
 
 const app = express()
@@ -15,6 +17,26 @@ app.use(express.static(__dirname + "/static"))
 //
 // see a list of items that hav been listed
 // GET - list all items
+const purchaseRecordStore = new TierionStore({
+    apiKey: "RaB5ZJ9HR4jemyRA6HToZegnFD28pWAoFE5WDe1nIaE",
+    storeId: "991"
+})
+
+app.get("/purchase-history", (req, res) => {
+    var recordId = req.query.recordId;
+
+    if (recordId) {
+        purchaseRecordStore.getRecord(recordId, (err, record) => {
+            if (err) return res.json(err)
+            res.json(record)
+        })
+    } else {
+        purchaseRecordStore.getRecords((err, records) => {
+            if (err) return res.json(err)
+            res.json(records)
+        })
+    }
+})
 
 const port = process.env.PORT || 3000
 
